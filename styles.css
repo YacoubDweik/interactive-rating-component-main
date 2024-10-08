@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: #1c232d;
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --font-size: 15px;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 330px);
+  background-color: var(--Dark-Blue);
+  color: var(--Light-Grey);
+  padding: 25px;
+  font-family: "Overpass";
+  border-radius: 20px;
+  min-height: 360px;
+}
+
+.image {
+  background-color: #272e38;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 15px;
+}
+
+.container span {
+  display: block;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.container p {
+  font-size: 14px;
+  max-width: 275px;
+  line-height: 1.5;
+}
+
+form {
+  padding: 25px 0 0;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.opt {
+  position: relative;
+}
+
+form input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  visibility: hidden;
+}
+
+form label:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+form input[type="radio"]:checked + label {
+  background-color: var(--Orange);
+  color: white;
+}
+
+form label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #272e38;
+  transition: 0.3s;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+form input[type="submit"] {
+  display: block;
+  padding: 15px;
+  background-color: var(--Orange);
+  color: var(--Dark-Blue);
+  width: 100%;
+  border: 0;
+  border-radius: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.container.two {
+  text-align: center;
+}
+
+.container.two .image {
+  width: 100%;
+  height: auto;
+  background-color: var(--Dark-Blue);
+}
+
+.container.two .image img {
+  max-width: 100%;
+}
+
+.container.two > div + div {
+  margin: 25px auto 0;
+  border-radius: 40px;
+  width: fit-content;
+  color: var(--Orange);
+  background-color: #272e38;
+  padding: 10px 15px;
+}
+
+.container.two div > span {
+  display: inline;
+}
+
+.container.two .rate {
+  color: var(--Orange);
+  font-size: 16px;
+  font-weight: 400;
+}
